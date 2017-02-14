@@ -40,11 +40,25 @@ function generateReply(text) {
            "Hello my cute koala"];
   var subs = ["you are too cute","you are too sweet","you are the best","I love you",
                "Roses are red, violets are blue, no one can measure my love for you"];
+
+  var songs = ["https://www.youtube.com/watch?v=Tj0xMiFWfsQ",
+  				"https://www.youtube.com/watch?v=PT2_F-1esPk",
+  				"https://www.youtube.com/watch?v=l-gSWc7TlRA",
+  				"https://www.youtube.com/watch?v=nYh-n7EOtMA",
+  				"https://www.youtube.com/watch?v=lrfhf1Gv4Tw",
+  				"https://www.youtube.com/watch?v=7F37r50VUTQ",
+  				"https://www.youtube.com/watch?v=YykjpeuMNEk",
+  				"https://www.youtube.com/watch?v=VPRjCeoBqrI",
+  				"https://www.youtube.com/watch?v=60ItHLz5WEA"];
   var index = Math.floor(Math.random() * (greets.length));
   var index2 = Math.floor(Math.random() * (subs.length));
+  var songid = Math.floor(Math.random() * (songs.length));
+
 
   var greet = greets[index];
   var sub = subs[index2];
+  var song = songs[songid];
+
 
   var reply = "";
   var text_array = text.split(' ');
@@ -63,6 +77,10 @@ function generateReply(text) {
   }
   if (text_array.indexOf("cute")!==-1 || text_array.indexOf("sweet")!==-1) {
     reply += " "+sub;
+  }
+
+  if (text_array.indexOf("sing")!==-1 || text_array.indexOf("song")!==-1 || text_array.indexOf("songs")!==-1) {
+  	reply += " "+song;
   }
   
   //reply += " Love you koala :)";
