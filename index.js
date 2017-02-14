@@ -77,7 +77,7 @@ function generateReply(text) {
     reply += " I am good :)";
   }
   
-  if (text_array.indexOf("i")!== -1 && text_array.indexOf("love")!== -1 && text_array.indexOf("you")!== -1) {
+  if (text_array.indexOf("love")!== -1 && text_array.indexOf("you")!== -1) {
     reply += " I love you too my sweet koala :*"
     
   }
