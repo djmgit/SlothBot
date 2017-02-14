@@ -109,7 +109,7 @@ app.post('/webhook/', function (req, res) {
 					sendTextMessage(sender, message);
 				}
 			});*/
-			sendTextMessage("hello");
+			sendTextMessage(sender,"hello");
 			// sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
 		if (event.postback) {
