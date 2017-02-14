@@ -49,7 +49,7 @@ function generateReply(text) {
   var reply = "";
   var text_array = text.split(' ');
   
-  if (text_array.indexOf("hi")!== -1 || text_array.indexOf("hello")) {
+  if (text_array.indexOf("hi")!== -1 || text_array.indexOf("hello")!==-1) {
     reply = greet+".";
   }
   
