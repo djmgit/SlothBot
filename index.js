@@ -34,6 +34,43 @@ function sendTextMessage(sender, text) {
 	});
 }
 
+
+function generateReply(text) {
+  var greets = ["Hi pretty koala","Hi beautiful koala","Hello my dear","Hello my sweet koala",
+           "Hello my cute koala"];
+  var subs = ["you are too cute","you are too sweet","you are the best","I love you",
+               "Roses are red, violets are blue, no one can measure my love for you"];
+  var index = Math.floor(Math.random() * (greets.length));
+  var index2 = Math.floor(Math.random() * (subs.length));
+
+  var greet = greets[index];
+  var sub = subs[index2];
+
+  reply = "";
+  text_array = text.split(' ');
+  
+  if (text_array.indexOf("hi")!== -1 || text_array.indexOf("hello")) {
+    reply = greet+".";
+  }
+  
+  if (text_array.indexOf("how")!==-1 && text_array.indexOf("are")!==-1 && text_array.indexOf("you")!==-1){
+    reply += " I am good :)";
+  }
+  
+  if (text_array.indexOf("i")!== -1 && text_array.indexOf("love")!== -1 && text_array.indexOf("you")!== -1) {
+    reply += " I love you too my sweet koala :*"
+    
+  }
+  if (text_array.indexOf("cute")!==-1 || text_array.indexOf("sweet")!==-1) {
+    reply += " "+sub;
+  }
+  
+  //reply += " Love you koala :)";
+  
+  return reply;
+}
+
+
 function sendGenericMessage(sender, title, subtitle, image_url) {
 	var messageData = {
 		"attachment": {
@@ -109,7 +146,8 @@ app.post('/webhook/', function (req, res) {
 					sendTextMessage(sender, message);
 				}
 			});*/
-			sendTextMessage(sender,"hello");
+			reply = generateReply(message);
+			sendTextMessage(reply,"hello");
 			// sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
 		if (event.postback) {
