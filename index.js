@@ -49,7 +49,13 @@ function generateReply(text) {
   				"https://www.youtube.com/watch?v=7F37r50VUTQ",
   				"https://www.youtube.com/watch?v=YykjpeuMNEk",
   				"https://www.youtube.com/watch?v=VPRjCeoBqrI",
-  				"https://www.youtube.com/watch?v=60ItHLz5WEA"];
+  				"https://www.youtube.com/watch?v=60ItHLz5WEA",
+  				"https://www.youtube.com/watch?v=jUe8uoKdHao",
+  				"https://www.youtube.com/watch?v=Awr_jzijeIU",
+  				"https://www.youtube.com/watch?v=450p7goxZqg",
+  				"https://www.youtube.com/watch?v=UrUYu0Vwycw",
+  				"https://www.youtube.com/watch?v=lp-EO5I60KA",
+  				"https://www.youtube.com/watch?v=fwK7ggA3-bU"];
   var index = Math.floor(Math.random() * (greets.length));
   var index2 = Math.floor(Math.random() * (subs.length));
   var songid = Math.floor(Math.random() * (songs.length));
