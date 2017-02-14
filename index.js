@@ -68,25 +68,36 @@ function generateReply(text) {
 
   var reply = "";
   var text_array = text.split(' ');
+  var flag = 0;
   
   if (text_array.indexOf("hi")!== -1 || text_array.indexOf("hello")!==-1) {
     reply = greet+".";
+    flag = 1;
   }
   
-  if (text_array.indexOf("how")!==-1 && text_array.indexOf("are")!==-1 && text_array.indexOf("you")!==-1){
+  if ((text_array.indexOf("how")!==-1 && text_array.indexOf("are")!==-1 && text_array.indexOf("you?")!==-1) || 
+  	(text_array.indexOf("how")!==-1 && text_array.indexOf("are")!==-1 && text_array.indexOf("you")!==-1)){
     reply += " I am good :)";
+	flag = 1;
   }
   
   if (text_array.indexOf("love")!== -1 && text_array.indexOf("you")!== -1) {
     reply += " I love you too my sweet koala :*"
+    flag = 1;
     
   }
   if (text_array.indexOf("cute")!==-1 || text_array.indexOf("sweet")!==-1) {
     reply += " "+sub;
+    flag = 1;
   }
 
   if (text_array.indexOf("sing")!==-1 || text_array.indexOf("song")!==-1 || text_array.indexOf("songs")!==-1) {
   	reply += " "+song;
+  	flag = 1;
+  }
+
+  if (flag == 0) {
+  	reply = "Sorry, I cannot reply to this at present.I am still learning :)"
   }
   
   //reply += " Love you koala :)";
