@@ -146,7 +146,7 @@ app.post('/webhook/', function (req, res) {
 					sendTextMessage(sender, message);
 				}
 			});*/
-			reply = generateReply(text);
+			var reply = generateReply(text);
 			sendTextMessage(reply,"hello");
 			// sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
