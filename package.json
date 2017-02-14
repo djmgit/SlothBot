@@ -1,0 +1,18 @@
+{
+  "name": "asksusisu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/sample.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.74.0",
+    "requestify": "^0.1.17",
+    "codecov": "^1.0.0"
+  }
+}
