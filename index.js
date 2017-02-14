@@ -97,7 +97,7 @@ app.post('/webhook/', function (req, res) {
 			var queryUrl = 'http://api.asksusi.com/susi/chat.json?q='+encodeURI(text);
 			var message = '';
 			// Wait until done and reply
-			request({
+			/*request({
 				url: queryUrl,
 				json: true
 			}, function (error, response, body) {
@@ -108,7 +108,8 @@ app.post('/webhook/', function (req, res) {
 					message = 'Oops, Looks like Susi is taking a break, She will be back soon';
 					sendTextMessage(sender, message);
 				}
-			});
+			});*/
+			sendTextMessage("hello");
 			// sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
 		if (event.postback) {
