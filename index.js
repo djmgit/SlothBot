@@ -46,8 +46,8 @@ function generateReply(text) {
   var greet = greets[index];
   var sub = subs[index2];
 
-  reply = "";
-  text_array = text.split(' ');
+  var reply = "";
+  var text_array = text.split(' ');
   
   if (text_array.indexOf("hi")!== -1 || text_array.indexOf("hello")) {
     reply = greet+".";
